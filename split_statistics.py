@@ -43,19 +43,20 @@ def draw_pie(stat,title):
     surface.write_to_png('%s.png' % title)   
 
 part = {}
-for filename in os.listdir('.'):
+for filename in os.listdir('瞬时空号检测'):
     for tag,name in TAGS.items():
         if re.search(tag,filename.decode('utf-8')):
+            print tag
             try: 
                 if name == "normal":
-                    part[tag] = pd.read_csv(filename,skiprows=19,header=None)
+                    part[tag] = pd.read_csv(os.path.join('瞬时空号检测',filename),skiprows=19,header=None)
                 else:
-                    part[tag] = pd.read_csv(filename,skiprows=12,header=None)
+                    part[tag] = pd.read_csv(os.path.join('瞬时空号检测',filename),skiprows=12,header=None)
             except ValueError:
                 part[tag] = None
 
-sample_avail = pd.read_csv('../available.txt',header=None)
-sample_dis = pd.read_csv('../disable.txt',header=None)
+sample_avail = pd.read_csv('available.txt',header=None)
+sample_dis = pd.read_csv('disable.txt',header=None)
 
 stat_avail = get_stat(sample_avail,part)
 stat_dis = get_stat(sample_dis,part)
