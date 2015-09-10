@@ -1,0 +1,16 @@
+POST /i/v1/pay/userstatusqry/guest HTTP/1.1
+Host: shop.10086.cn
+Content-Length: 45
+Accept: application/json, text/javascript, */*; q=0.01
+Origin: http://shop.10086.cn
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.85 Safari/537.36
+Content-Type: application/json; charset=UTF-8
+DNT: 1
+Referer: http://shop.10086.cn/i/?f=rechargecredit
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.8,en-GB;q=0.6,en;q=0.4
+Cookie: jsessionid-echd-cpt-cmcc-jt=96B0A85A83536E5F50BF46E74DDAA249; WT_FPC=id=217d92a68f6e7e5fe471441868739137:lv=1441868769211:ss=1441868739137
+Connection: close
+
+{"phoneNo":"base64_encode","channel":"00"}
