@@ -14,3 +14,8 @@ Cookie: jsessionid-echd-cpt-cmcc-jt=96B0A85A83536E5F50BF46E74DDAA249; WT_FPC=id=
 Connection: close
 
 {"phoneNo":"base64_encode","channel":"00"}
+
+
+{"data":{"remark":null,"queryType":"01","queryValue":"15292200021","userName":null,"userStatus":"03","userCart":null,"userProv":"731","balance":null,"payAmount":null},"retCode":"000000","retMsg":"查询用户状态成功"}
+
+userstatus >00 欠费或者空号
