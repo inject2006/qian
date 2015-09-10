@@ -1,0 +1,17 @@
+POST /webportal-wt/hnselfservice/topupquery/topup-query!getUserFeeInfo.do HTTP/1.1
+Host: hn.189.cn
+Content-Length: 44
+Pragma: no-cache
+Cache-Control: no-cache
+Accept: application/json, text/javascript, */*; q=0.01
+Origin: http://hn.189.cn
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.85 Safari/537.36
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+DNT: 1
+Referer: http://hn.189.cn/webportal-wt/hnselfservice/topuporder/topup-order!topupOrder.action?fastcode=10000271
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.8,en-GB;q=0.6,en;q=0.4
+Cookie:
+
+teleNo={phone}&productType=2&superId=010
