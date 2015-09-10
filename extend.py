@@ -8,18 +8,26 @@ if __name__ == "__main__":
 
     if len(sys.argv) == 2:
         bit = int(sys.argv[1])
-    mobile_list = []
-    with file('log_mobiles.txt','r') as top_f:
-        with file('extend.txt','w') as f:
-            for line in top_f:
-                mobile = line.split(' ')[-1].strip('\n')
-                if not mobile.isdigit():
-                    print mobile
-                    continue
-                for i in xrange(10**int(bit)):
-                    d = mobile[:-bit]+str(i).zfill(int(bit))
-                    f.write(d+'\n')
-                    mobile_list.append(d)
+    else:
+        bit = 0
+    if bit != 0:
+        mobile_list = []
+        with file('log_mobiles.txt','r') as top_f:
+            with file('extend.txt','w') as f:
+                for line in top_f:
+                    mobile = line.split(' ')[-1].strip('\n')
+                    if not mobile.isdigit():
+                        print mobile
+                        continue
+                    for i in xrange(10**int(bit)):
+                        d = mobile[:-bit]+str(i).zfill(int(bit))
+                        f.write(d+'\n')
+                        mobile_list.append(d)
+    elif bit == 0:
+        mobile_list = file("tobe_detect.txt",'r').readlines()
+        print len(mobile_list)
+        mobile_list = [m.strip('\r\n') for m in mobile_list]
+        print mobile_list
 
     modem_data_dao = base_dao.ModemDataDao(mysql_url)
     with file('extend.log','w') as fp:
