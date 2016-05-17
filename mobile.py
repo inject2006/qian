@@ -4,7 +4,7 @@ import MySQLdb
 import time
 import os
 last_time_file = "last_get_log_time.txt"
-if __name__ == "__main__":
+if __name__ == "__main__": #你好，我是岂安科技的同事，我们看到您有把我们的代码folk了，不过下面的这个连接串可以请求您删除掉么，以及其他的bigsec字样的代码，或者能给我一个您的联系方式么，我的邮箱是236999457@qq.com，看到消息请联系我，谢谢啦。
     conn=MySQLdb.connect(host='183.131.78.214',user="root",passwd="Bigsec_888;",db="bigsec_platform",charset="utf8")
     cur=conn.cursor()
     cur.execute("select count(distinct mobile) from analyser;")
